@@ -1,20 +1,87 @@
 import turtle
-turtle.bgcolor('#ffffff')
-turtle.title("Radhe Krishna")
-screen= turtle.Screen()
-screen.setup(650,580)
-t1 = turtle.Turtle()
-t1.speed(1);t1.right(90);t1.pu();t1.forward(180);t1.left(90);t1.pd();t1.fillcolor("#f20707");t1.begin_fill()
-t1.forward(400);t1.right(90);t1.forward(100);t1.right(90);t1.forward(800);t1.right(90);t1.forward(100);t1.right(90);t1.forward(400);t1.end_fill();t1.forward(160)
-t1.left(40);t1.fillcolor("#42cef5");t1.begin_fill();t1.circle(250,280);t1.left(40);t1.forward(160);t1.end_fill();t1.fillcolor("#f707bf");t1.begin_fill();t1.forward(160);t1.left(130);t1.circle(-300,30);t1.forward(95);t1.circle(50,40)
-t1.right(40);t1.forward(43);t1.circle(80,25);t1.circle(50,30);t1.left(10);t1.circle(35,28);t1.right(160);t1.circle(10,100);t1.right(100);t1.circle(10,80);t1.forward(20);t1.left(80)
-t1.circle(100,15);t1.right(90);t1.forward(6);t1.left(65);t1.circle(60,55);t1.right(160);t1.circle(20,100);t1.forward(10);t1.circle(-20,25);t1.left(170);t1.circle(-20,40);t1.forward(10);t1.circle(20,80)
-t1.right(135);t1.circle(60,15);t1.left(70);t1.forward(6);t1.right(110);t1.forward(9);t1.left(80);t1.circle(70,24);t1.right(60);t1.circle(65,30);t1.circle(-5,110);t1.circle(5,120);t1.right(90); t1.circle(5,60)
-t1.forward(10);t1.circle(10,5);t1.right(80);t1.forward(15);t1.circle(-5,160);t1.forward(6);t1.circle(2,180);t1.forward(6);t1.circle(20,30);t1.right(140);t1.circle(3,150);t1.right(110);t1.circle(4,80);t1.forward(2)
-t1.right(100);t1.forward(6);t1.right(60);t1.forward(9);t1.circle(2,180);t1.forward(10);t1.left(30);t1.forward(15);t1.right(85);t1.forward(40);t1.right(60)
-t1.circle(5,310);t1.right(80);t1.forward(3);t1.right(90);t1.forward(42);t1.right(30);t1.forward(10);t1.left(90);t1.circle(20,60);t1.left(95);t1.forward(12)
-t1.right(29);t1.forward(42);t1.right(90);t1.forward(34);t1.right(85);t1.forward(2);t1.circle(60,25);t1.right(80);t1.circle(10,40);t1.forward(45);t1.left(10)
-t1.forward(130);t1.left(90);t1.forward(20);t1.right(90);t1.forward(10);t1.left(90);t1.forward(10);t1.right(90);t1.forward(5);t1.left(90);t1.forward(25)
-t1.left(100);t1.forward(120);t1.right(175);t1.circle(50,50);t1.right(80);t1.circle(110,15);t1.forward(75);t1.left(97);t1.forward(260);t1.end_fill();t1.pu();t1.hideturtle()
-t1.right(90);t1.forward(100);t1.right(90);t1.forward(420);t1.color("#012d40");t1.write("Radhe Krishna....", font=("Script",45, "bold"))
-turtle.done()
+"""
+This program uses the turtle graphics library to draw a stylized depiction of Lord Krishna with a decorative background and text.
+Functions:
+    background(tur): Draws a filled rectangular background using the provided turtle object.
+    blue_circle(tur): Draws a large blue circle as part of the artwork using the provided turtle object.
+    krishna_shape(tur): Draws the main Krishna figure using a series of turtle movements and fills.
+    text(tur): Writes the text "Radhe Krishna...." on the canvas using the provided turtle object.
+    main(): Sets up the turtle screen, initializes the turtle, and calls the drawing functions in sequence.
+The drawing consists of a red background, a blue circle, a stylized Krishna figure, and a greeting text.
+"""
+
+
+def background(tur):
+    tur.fillcolor("#f20707")
+    tur.begin_fill()
+    tur.forward(400)
+    tur.right(90)
+    tur.forward(100)
+    tur.right(90)
+    tur.forward(800)
+    tur.right(90)
+    tur.forward(100)
+    tur.right(90)
+    tur.forward(400)
+    tur.end_fill()
+    tur.forward(160)
+
+def blue_circle(tur):
+    tur.left(40)
+    tur.fillcolor("#0b67deee")
+    tur.begin_fill()
+    tur.circle(250, 280)
+    tur.left(40)
+    tur.forward(160)
+    tur.end_fill()
+
+def krishna_shape(tur):
+    tur.fillcolor("#f707cfe7")
+    tur.begin_fill()
+    tur.forward(160);tur.left(130);tur.circle(-300, 30);tur.forward(95);tur.circle(50, 40);tur.right(40);tur.forward(43);tur.circle(80, 25)
+    tur.circle(50, 30);tur.left(10);tur.circle(35, 28);tur.right(160);tur.circle(10, 100);tur.right(100);tur.circle(10, 80);tur.forward(20)
+    tur.left(80);tur.circle(100, 15);tur.right(90);tur.forward(6);tur.left(65);tur.circle(60, 55);tur.right(160);tur.circle(20, 100);tur.forward(10)
+    tur.circle(-20, 25);tur.left(170);tur.circle(-20, 40);tur.forward(10);tur.circle(20, 80);tur.right(135);tur.circle(60, 15);tur.left(70);tur.forward(6)
+    tur.right(110);tur.forward(9);tur.left(80);tur.circle(70, 24);tur.right(60);tur.circle(65, 30);tur.circle(-5, 110);tur.circle(5, 120);tur.right(90)
+    tur.circle(5, 60);tur.forward(10);tur.circle(10, 5);tur.right(80);tur.forward(15);tur.circle(-5, 160);tur.forward(6);tur.circle(2, 180);tur.forward(6)
+    tur.circle(20, 30);tur.right(140);tur.circle(3, 150);tur.right(110);tur.circle(4, 80);tur.forward(2);tur.right(100);tur.forward(6);tur.right(60)
+    tur.forward(9);tur.circle(2, 180);tur.forward(10);tur.left(30);tur.forward(15);tur.right(85);tur.forward(40);tur.right(60);tur.circle(5, 310);tur.right(80)
+    tur.forward(3);tur.right(90);tur.forward(42);tur.right(30);tur.forward(10);tur.left(90);tur.circle(20, 60);tur.left(95);tur.forward(12)
+    tur.right(29);tur.forward(42);tur.right(90);tur.forward(34);tur.right(85);tur.forward(2);tur.circle(60, 25);tur.right(80);tur.circle(10, 40);tur.forward(45)
+    tur.left(10);tur.forward(130);tur.left(90);tur.forward(20);tur.right(90);tur.forward(10);tur.left(90);tur.forward(10);tur.right(90)
+    tur.forward(5);tur.left(90);tur.forward(25);tur.left(100);tur.forward(120);tur.right(175);tur.circle(50, 50);tur.right(80);tur.circle(110, 15);tur.forward(75);tur.left(97);tur.forward(260)
+    tur.end_fill()
+
+def text(tur):
+    tur.pu()
+    tur.hideturtle()
+    tur.right(90)
+    tur.forward(100)
+    tur.right(90)
+    tur.forward(420)
+    tur.color("#06202cf0")
+    tur.write("Radhe Krishna....", font=("Script", 45, "bold"))
+
+def main():
+    turtle.bgcolor('#ffffff')
+    turtle.title("Radhe Krishna")
+    screen = turtle.Screen()
+    screen.setup(650, 580)
+
+    tur = turtle.Turtle()
+    tur.speed(1)
+    tur.right(90)
+    tur.penup()
+    tur.forward(180)
+    tur.left(90)
+    tur.pendown()
+
+
+    background(tur)
+    blue_circle(tur)
+    krishna_shape(tur)
+    text(tur)
+
+    turtle.done()
+    
+main()
